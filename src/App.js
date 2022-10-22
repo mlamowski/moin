@@ -1,11 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/About";
+import Startscreen from "./components/Startscreen";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Impress from "./components/Impress";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="text-center font-sans text-white">
+      <Startscreen/> 
+      <About/>
+      <Projects></Projects>  
+      <Contact></Contact>
+      <Impress></Impress>
+    </div>
   );
 }
 
