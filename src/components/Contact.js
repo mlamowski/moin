@@ -1,18 +1,25 @@
 import React from 'react'
 import Wave4 from './Wave4'
 import Typo_Contact from './Typo_Contact'
-import Button from './Button'
 
 const Contact = () => {
   return (
-    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a] flex flex-col justify-evenly items-center'>
-        <Typo_Contact></Typo_Contact>
-        <p>
-            Neugierig geworden? 
-            Schreib mir doch ein paar Zeilen!
-            Mail: hello@lamowski.com
-        </p>
-        <Button></Button>
+    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a]  text-white font-sans text-center '>
+        <h1 className=' text-4xl pb-[30px]'>KONTAKT</h1>
+        <div className=''>
+          <div className='flex justify-between items-center flex-col'>
+            <p className=' pb-[30px]'>
+                Neugierig geworden? <br/>
+                Schreib mir doch ein paar Zeilen! <br/>
+                Mail: hello@lamowski.com
+            </p>
+            <button type="button" className=' bg-[#a85d62] p-[10px] rounded-2xl w-[250px] h-[70px]'>
+              Emailt mich!
+            </button> 
+          </div>
+
+        </div>
+
         <Wave4></Wave4>
     </div>
   )

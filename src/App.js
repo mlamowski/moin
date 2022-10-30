@@ -6,7 +6,7 @@ import Impress from "./components/Impress";
 
 function App() {
   return (
-    <div className="text-center font-sans text-white">
+    <div>
       <Startscreen/> 
       <About/>
       <Projects></Projects>  
