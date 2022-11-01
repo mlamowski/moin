@@ -13,9 +13,9 @@ const Contact = () => {
                 Schreib mir doch ein paar Zeilen! <br/>
                 Mail: hello@lamowski.com
             </p>
-            <button type="button" className=' bg-[#a85d62] p-[10px] rounded-2xl w-[250px] h-[70px]'>
+            <a href="mailto:hello@lamowski.com" className=' bg-[#a85d62] p-[10px] rounded-2xl w-[250px] h-[45px]'>
               Emailt mich!
-            </button> 
+            </a> 
           </div>
 
         </div>
