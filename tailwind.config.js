@@ -85,7 +85,12 @@ module.exports = {
 		'sans': ['Comfortaa'],
 		'serif': ['Comfortaa'],
 		'mono': ['Comfortaa'],
-		'display': ['Comfortaa'],
+		'display': ['Comfortaa',"bold"],
+		'titan': ['Titan One'],
+		'lilita': ['Lilita One'],
+		'sigmar': ['Sigmar One'],
+		'concert': ['Concert One'],
+		'fredoka': ['Fredoka One'],
 		'body': ['Comfortaa'],
     }
   },

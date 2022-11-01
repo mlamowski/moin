@@ -1,11 +1,11 @@
 import React from 'react'
 import Wave2 from './Wave2'
 import Typo_Ueber_Mich from './Typo_Ueber_Mich'
-import michelle from './../img/Michelle.png';
-import build from './../img/build_FILL0_wght400_GRAD0_opsz48.svg'
-import code from './../img/code_FILL0_wght400_GRAD0_opsz48.svg'
-import design from './../img/design_services_FILL0_wght400_GRAD0_opsz48.svg'
-import draw from './../img/draw_FILL0_wght400_GRAD0_opsz48.svg'
+import michelle from './../../img/Michelle.png';
+import build from './../../img/build_FILL0_wght400_GRAD0_opsz48.svg'
+import code from './../../img/code_FILL0_wght400_GRAD0_opsz48.svg'
+import design from './../../img/design_services_FILL0_wght400_GRAD0_opsz48.svg'
+import draw from './../../img/draw_FILL0_wght400_GRAD0_opsz48.svg'
 import { useState, useEffect } from 'react';
 
 
@@ -40,8 +40,8 @@ const About = () => {
     }
    
   return (
-    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a] text-center font-sans text-white'>
-        <h1 className=' text-4xl pb-[30px]'>
+    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a] text-center  text-white'>
+        <h1 className=' text-4xl pb-[30px] font-extrabold'>
             ÜBER MICH
         </h1>
         <div className='flex justify-evenly items-center flex-wrap'>
@@ -51,7 +51,7 @@ const About = () => {
                     ? 'bg-white rounded-2xl opacity-1 p-[10px] mb-[30px] opacity-1'
                     : 'bg-white rounded-2xl opacity-1 p-[10px] mb-[30px] opacity-0'
                 } >
-                    <p className="text-black text-xs"  > {skills[isIndex].text} </p>
+                    <p className="text-black text-xs font-sans"  > {skills[isIndex].text} </p>
                 </div>      
                 <div className='flex justify-between items-center'>
                     {/*}
@@ -81,7 +81,7 @@ const About = () => {
                 </div>
       
 
-                <p className='py-[30px]'  >
+                <p className='py-[30px] font-sans'  >
                         Mein Name ist Michelle und ich brenne für einzigartige Designs und die neusten Technologien. 
                         
                 </p>

@@ -4,9 +4,9 @@ import Typo_Projects from './Typo_Projects'
 import Arrow_Left from './Arrow_Left'
 import Arrow_Right from './Arrow_Right'
 import Project from './Project'
-import example from './../img/Screenshot_3.png'
-import example2 from './../img/Screenshot_1.png'
-import michelle from './../img/frauenkopf.jpg';
+import example from './../../img/Screenshot_3.png'
+import example2 from './../../img/Screenshot_1.png'
+import michelle from './../../img/frauenkopf.jpg';
 
 
 import { useState, useEffect } from 'react';
@@ -47,7 +47,7 @@ const Projects = () => {
 
   return (
     <div className='bg-gradient-to-t from-[#121b2a] to-[#243b4e]  text-center font-sans text-white'>
-        <h1 className=' text-4xl pb-[30px]'>PROJEKTE</h1>
+        <h1 className=' text-4xl pb-[30px] font-extrabold'>PROJEKTE</h1>
         <div className='flex justify-evenly items-center'>
           <button onClick={toLeft} type="button" className='h-[50px] w-[50px] p-[10px]'> 
             <Arrow_Left></Arrow_Left>         

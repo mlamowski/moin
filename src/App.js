@@ -1,18 +1,18 @@
-import About from "./components/About";
-import Startscreen from "./components/Startscreen";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Impress from "./components/Impress";
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import Home from './pages/Home';
+import Impressum from "./pages/Impressum";
+import Datenschutz from './pages/Datenschutz';
 
 function App() {
   return (
-    <div>
-      <Startscreen/> 
-      <About/>
-      <Projects></Projects>  
-      <Contact></Contact>
-      <Impress></Impress>
-    </div>
+    <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/impressum' element={<Impressum />} />
+          <Route path='/datenschutz' element={<Datenschutz />} />
+        </Routes>
+      </Router>
   );
 }
 
