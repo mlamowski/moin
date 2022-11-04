@@ -6,12 +6,12 @@ import Impress from "./components/Impress";
 
 function Home() {
   return (
-    <div>
+    <div >
       <Startscreen/> 
       <About/>
       <Projects></Projects>  
-      <Contact></Contact>
-      <Impress></Impress>
+      <Contact ></Contact>
+      <Impress ></Impress>
     </div>
   );
 }

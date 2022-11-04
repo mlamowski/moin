@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -20,12 +21,21 @@ module.exports = {
 		'2xl': {'min': '1536px'},
 		// => @media (min-width: 1536px) { ... }
 	  },
-    extend: {},
+    extend: {
+		fontFamily: {
+			'sans': ['"Comfortaa"'],
+			'serif': ['"Comfortaa"'],
+			'mono': ['"Comfortaa"'],
+			'display': ['"Comfortaa"',"bold"],
+		},
+	},
     height: {
 		"10v": "10vh",
+		"15v": "15vh",
 		"20v": "20vh",
 		"30v": "30vh",
 		"40v": "40vh",
+		"45v": "45vh",
 		"50v": "50vh",
 		"60v": "60vh",
 		"70v": "70vh",
@@ -45,6 +55,7 @@ module.exports = {
 		"100w": "100vw",
 		"4/5": "80%",
 		"5/6": "56.25%",
+		"1/3": "33.33%",
 		"1/5": "20%",
 		"1/6": "15%",
 		"1/8": "12%",
@@ -53,9 +64,11 @@ module.exports = {
 		},
     spacing: {
 		"10v": "10vh",
+		"15v": "15vh",
 		"20v": "20vh",
 		"30v": "30vh",
 		"40v": "40vh",
+		"45v": "45vh",
 		"50v": "50vh",
 		"60v": "60vh",
 		"70v": "70vh",
@@ -81,18 +94,18 @@ module.exports = {
 		"1/10": "10%",
 		"1/20": "5%",
 		},
-    fontFamily: {
-		'sans': ['Comfortaa'],
-		'serif': ['Comfortaa'],
-		'mono': ['Comfortaa'],
-		'display': ['Comfortaa',"bold"],
-		'titan': ['Titan One'],
-		'lilita': ['Lilita One'],
-		'sigmar': ['Sigmar One'],
-		'concert': ['Concert One'],
-		'fredoka': ['Fredoka One'],
-		'body': ['Comfortaa'],
-    }
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'translate-z': (value) => ({
+            '--tw-translate-z': value,
+            transform: ` translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+          }), // this is actual CSS
+        },
+        { values: theme('translate'), supportsNegativeValues: true }
+      )
+    })
+  ],
 }

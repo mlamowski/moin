@@ -4,7 +4,7 @@ import Typo_Contact from './Typo_Contact'
 
 const Contact = () => {
   return (
-    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a]  text-white text-center '>
+    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a]  text-white text-center my-[-1px] '>
         <h1 className=' text-4xl pb-[30px] font-extrabold'>KONTAKT</h1>
         <div className=''>
           <div className='flex justify-between items-center flex-col'>

@@ -40,16 +40,16 @@ const About = () => {
     }
    
   return (
-    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a] text-center  text-white'>
+    <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a] text-center  text-white z-10 my-[-1px] '>
         <h1 className=' text-4xl pb-[30px] font-extrabold'>
             ÜBER MICH
         </h1>
         <div className='flex justify-evenly items-center flex-wrap'>
-            <div className=' flex-col flex  justify-between w-[350px] sm:w-[280px]'>
+            <div className='   justify-between w-[350px] sm:w-[280px]'>
                 <div className= {
                     skills[isIndex].visible
-                    ? 'bg-white rounded-2xl opacity-1 p-[10px] mb-[30px] opacity-1'
-                    : 'bg-white rounded-2xl opacity-1 p-[10px] mb-[30px] opacity-0'
+                    ? 'bg-white rounded-2xl opacity-1 p-[10px] mb-[30px] opacity-1 sm:h-auto'
+                    : 'bg-white rounded-2xl opacity-1 p-[0px] mb-[0px] opacity-0 sm:h-[0px] '
                 } >
                     <p className="text-black text-xs font-sans"  > {skills[isIndex].text} </p>
                 </div>      
@@ -76,7 +76,7 @@ const About = () => {
                                 ></Skills>
                             </div>
                         );
-                    })}
+                    })} 
 
                 </div>
       
