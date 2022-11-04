@@ -46,23 +46,30 @@ const Projects = () => {
 
 
   return (
-    <div className='bg-gradient-to-t from-[#121b2a] to-[#243b4e]  text-center font-sans text-white'>
+    <div className='bg-gradient-to-t from-[#121b2a] to-[#243b4e]  text-center font-sans text-white my-[-1px] '>
         <h1 className=' text-4xl pb-[30px] font-extrabold'>PROJEKTE</h1>
-        <div className='flex justify-evenly items-center'>
-          <button onClick={toLeft} type="button" className='h-[50px] w-[50px] p-[10px]'> 
-            <Arrow_Left></Arrow_Left>         
-          </button> 
-          <div className='flex-col flex  justify-between items-center flex-wrap w-1/2'>
-            <img className=' w-full aspect-video rounded-3xl object-contain;' src={projectList[isIndex].image} alt={projectList[isIndex].description}/>      
-            <p className='relative text-white pt-[30px] '> {projectList[isIndex].text} </p>
+        <div className='flex  flex-col justify-between items-center'>
+          <div className='flex justify-evenly items-center'>
+            <button onClick={toLeft} type="button" className='h-[50px] w-[50px] p-[10px] sm:w-[40px]'> 
+              <Arrow_Left></Arrow_Left>         
+            </button> 
+            <div className='flex-col flex  justify-between items-center flex-wrap w-1/2 sm:w-full'>
+              <img className=' w-full aspect-video rounded-3xl object-contain;' src={projectList[isIndex].image} alt={projectList[isIndex].description}/>      
+            </div>
+
+
+
+
+            <button onClick={toRight} type="button" className='h-[50px] w-[50px] p-[10px] sm:w-[40px]'>
+              <Arrow_Right></Arrow_Right>
+            </button> 
           </div>
-
-
-
-          <button onClick={toRight} type="button" className='h-[50px] w-[50px] p-[10px]'>
-            <Arrow_Right></Arrow_Right>
-          </button> 
+          <div className=' w-1/2 sm:w-[280px] '>
+            <p className='relative text-white pt-[30px]'> {projectList[isIndex].text} </p>
+          </div>
         </div>
+
+
 
 
       <Wave3></Wave3>
