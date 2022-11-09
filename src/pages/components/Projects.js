@@ -1,5 +1,7 @@
 import React from 'react'
 import Wave3 from './Wave3'
+import Wave3Animated from './Wave3Animated';
+
 import Typo_Projects from './Typo_Projects'
 import Arrow_Left from './Arrow_Left'
 import Arrow_Right from './Arrow_Right'
@@ -16,6 +18,14 @@ import { useState, useEffect } from 'react';
 const Projects = () => {
 
   const [isIndex, setIndex] = useState(0);
+  const [isActualKey, setActualKey] = useState(0);
+
+    const testtest = () => {
+      let time = Math.round(Date.now() / 2001);
+      setActualKey(time);
+      console.log("ich werde ausgeführt");
+  
+    }
 
   const toLeft = () => {
     let index = isIndex;
@@ -72,8 +82,10 @@ const Projects = () => {
 
 
 
-      <Wave3></Wave3>
-    </div>
+        <Wave3Animated
+            onMouseTest={testtest}
+            key={isActualKey}
+                 />    </div>
   )
 }
 
