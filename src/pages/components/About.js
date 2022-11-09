@@ -1,11 +1,14 @@
 import React from 'react'
 import Wave2 from './Wave2'
+import Wave2Animated from './Wave2Animated';
 import Typo_Ueber_Mich from './Typo_Ueber_Mich'
 import michelle from './../../img/Michelle.png';
 import build from './../../img/build_FILL0_wght400_GRAD0_opsz48.svg'
 import code from './../../img/code_FILL0_wght400_GRAD0_opsz48.svg'
 import design from './../../img/design_services_FILL0_wght400_GRAD0_opsz48.svg'
 import draw from './../../img/draw_FILL0_wght400_GRAD0_opsz48.svg'
+import Stopwatch from './Stopwatch';
+
 import { useState, useEffect } from 'react';
 
 
@@ -23,7 +26,19 @@ const skills = [
 const About = () => {
     const [isVisible, setVisible] = useState(skills);
     const [isIndex, setIndex] = useState(0);
+    const [isActualKey, setActualKey] = useState(0);
 
+    const testtest = () => {
+      let time = Math.round(Date.now() / 2001);
+      setActualKey(time);
+      console.log("ich werde ausgeführt");
+  
+    }
+
+    useEffect(() => {
+        console.log(new Date().getTime());
+      });
+ 
     const changeVisiblityTrue = (index) => {
         const newIsVisible = [...isVisible]
         newIsVisible[index].visible = true; 
@@ -38,7 +53,7 @@ const About = () => {
         setVisible(newIsVisible);
 
     }
-   
+ 
   return (
     <div className='bg-gradient-to-t from-[#121b2a] to-[#222d3a] text-center  text-white z-10 my-[-1px] '>
         <h1 className=' text-4xl pb-[30px] font-extrabold'>
@@ -49,7 +64,7 @@ const About = () => {
                 <div className= {
                     skills[isIndex].visible
                     ? 'bg-white rounded-2xl opacity-1 p-[10px] mb-[30px] opacity-1 sm:h-auto'
-                    : 'bg-white rounded-2xl opacity-1 p-[0px] mb-[0px] opacity-0 sm:h-[0px] '
+                    : 'bg-white rounded-2xl opacity-1 p-[10px] sm:p-[0px] mb-[30px] sm:mb-[0px] opacity-0 sm:h-[0px] '
                 } >
                     <p className="text-black text-xs font-sans"  > {skills[isIndex].text} </p>
                 </div>      
@@ -92,7 +107,10 @@ const About = () => {
         </div>
         
 
-        <Wave2/>
+        <Wave2Animated
+            onMouseTest={testtest}
+            key={isActualKey}
+                 />
     </div>
   )
 }

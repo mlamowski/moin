@@ -10,7 +10,7 @@ const Startscreen = () => {
             <Moon className=" "></Moon>
             <Stars></Stars>
             <Stars></Stars>
-            <Stars></Stars>
+
             {/* Stars neu machen */}
 
         </div>
