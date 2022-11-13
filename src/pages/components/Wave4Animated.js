@@ -25,6 +25,10 @@ export default function Wave4Animated({ onMouseTest}) {
         onMouseTest();
 
     }}
+    onTouchStart={() => {
+      testFunction();
+      onMouseTest();
+    }}
 
      />
   )

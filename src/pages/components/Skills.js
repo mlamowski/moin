@@ -1,15 +1,17 @@
 import React from 'react'
-import { useState } from 'react';
-
+import { useState, useEffect } from "react";
 const Skills = ({description, image, visible, onChangeVisibilityTrue,onChangeVisibilityFalse, index}) => {
 
-    
+
   return (
     <div>
         
         <div
             onTouchStart={() => {
                 onChangeVisibilityTrue(index);
+            }}
+            onTouchEnd={() => {
+                onChangeVisibilityFalse(index);
             }}
             onMouseOver={() => {
                 onChangeVisibilityTrue(index);

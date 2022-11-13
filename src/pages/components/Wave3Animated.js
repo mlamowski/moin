@@ -25,6 +25,10 @@ export default function Wave3Animated({ onMouseTest}) {
         onMouseTest();
 
     }}
+    onTouchStart={() => {
+      testFunction();
+      onMouseTest();
+    }}
 
      />
   )
