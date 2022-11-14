@@ -39,11 +39,11 @@ const About = () => {
     useEffect(() => {
       });
  
-    const checkNewIndex = () => {
-        if(isIndex == isLastIndex) {
-            console.log("der Button wurde nochmal geklickt " + isIndex + ", " + isLastIndex);
+    const checkNewIndex = (index) => {
+        if(index == isLastIndex) {
+            console.log("der Button wurde nochmal geklickt " + index + ", " + isIndex + ", " + isLastIndex);
         } else {
-            console.log("es wurde ein neuer Button geklickt " + isIndex + ", " + isLastIndex);
+            console.log("es wurde ein neuer Button geklickt " + index + ", " + isIndex + ", " + isLastIndex);
             changeVisiblityFalse(isLastIndex);
 
         }
@@ -55,6 +55,7 @@ const About = () => {
         setLastIndex(isIndex);
         setIndex(index);
         setVisible(newIsVisible);
+        console.log("funktion changeVisibilityTrue ausgeführt");
 
     }
 

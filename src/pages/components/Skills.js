@@ -9,10 +9,11 @@ const Skills = ({description, image, visible, onChangeVisibilityTrue,onChangeVis
         <div
             onTouchStart={() => {
                 onChangeVisibilityTrue(index);
-                onCheckNewIndex();
+                onCheckNewIndex(index);
             }}
             onMouseOver={() => {
                 onChangeVisibilityTrue(index);
+
             }} 
             onMouseLeave={() => {
                 onChangeVisibilityFalse(index);
