@@ -6,7 +6,7 @@ import Impress from "./components/Impress";
 
 function Home() {
   return (
-    <div >
+    <div className="overflow-x-hidden">
       <Startscreen/> 
       <About/>
       <Projects></Projects>  

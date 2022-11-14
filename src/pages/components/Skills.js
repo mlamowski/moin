@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-const Skills = ({description, image, visible, onChangeVisibilityTrue,onChangeVisibilityFalse, index}) => {
+const Skills = ({description, image, visible, onChangeVisibilityTrue,onChangeVisibilityFalse, onCheckNewIndex, index}) => {
 
 
   return (
@@ -9,9 +9,7 @@ const Skills = ({description, image, visible, onChangeVisibilityTrue,onChangeVis
         <div
             onTouchStart={() => {
                 onChangeVisibilityTrue(index);
-            }}
-            onTouchEnd={() => {
-                onChangeVisibilityFalse(index);
+                onCheckNewIndex();
             }}
             onMouseOver={() => {
                 onChangeVisibilityTrue(index);

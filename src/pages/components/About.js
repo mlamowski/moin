@@ -26,24 +26,36 @@ const skills = [
 const About = () => {
     const [isVisible, setVisible] = useState(skills);
     const [isIndex, setIndex] = useState(0);
+    const [isLastIndex, setLastIndex] = useState(0);
+
     const [isActualKey, setActualKey] = useState(0);
 
     const testtest = () => {
       let time = Math.round(Date.now() / 2001);
       setActualKey(time);
-      console.log("ich werde ausgeführt");
   
     }
 
     useEffect(() => {
-        console.log(new Date().getTime());
       });
  
+    const checkNewIndex = () => {
+        if(isIndex == isLastIndex) {
+            console.log("der Button wurde nochmal geklickt " + isIndex + ", " + isLastIndex);
+        } else {
+            console.log("es wurde ein neuer Button geklickt " + isIndex + ", " + isLastIndex);
+            changeVisiblityFalse(isLastIndex);
+
+        }
+    }
+
     const changeVisiblityTrue = (index) => {
         const newIsVisible = [...isVisible]
         newIsVisible[index].visible = true; 
+        setLastIndex(isIndex);
         setIndex(index);
         setVisible(newIsVisible);
+
     }
 
     const changeVisiblityFalse = (index) => {
@@ -88,6 +100,7 @@ const About = () => {
                                     index={index}
                                     onChangeVisibilityTrue={changeVisiblityTrue}
                                     onChangeVisibilityFalse={changeVisiblityFalse}
+                                    onCheckNewIndex={checkNewIndex}
                                 ></Skills>
                             </div>
                         );
