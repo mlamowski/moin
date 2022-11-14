@@ -2,7 +2,7 @@ import React from 'react'
 import Wave2 from './Wave2'
 import Wave2Animated from './Wave2Animated';
 import Typo_Ueber_Mich from './Typo_Ueber_Mich'
-import michelle from './../../img/Michelle.png';
+import michelle from './../../img/Michelle_02.png';
 import build from './../../img/build_FILL0_wght400_GRAD0_opsz48.svg'
 import code from './../../img/code_FILL0_wght400_GRAD0_opsz48.svg'
 import design from './../../img/design_services_FILL0_wght400_GRAD0_opsz48.svg'
