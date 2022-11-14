@@ -13,6 +13,8 @@ const Skills = ({description, image, visible, onChangeVisibilityTrue,onChangeVis
             }}
             onMouseOver={() => {
                 onChangeVisibilityTrue(index);
+                //onCheckNewIndex(index);
+
 
             }} 
             onMouseLeave={() => {

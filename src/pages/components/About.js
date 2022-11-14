@@ -39,7 +39,9 @@ const About = () => {
     useEffect(() => {
       });
  
+      /*
     const checkNewIndex = (index) => {
+            console.log(isVisible.visible + " " + index)
         if(index == isLastIndex) {
             console.log("der Button wurde nochmal geklickt " + index + ", " + isIndex + ", " + isLastIndex);
         } else {
@@ -47,6 +49,27 @@ const About = () => {
             changeVisiblityFalse(isLastIndex);
 
         }
+    }
+    */
+
+    const deactivateAllButIndex = (index) => {
+        if(index == 0 ) {
+            changeVisiblityFalse(1);
+            changeVisiblityFalse(2);
+            changeVisiblityFalse(3);
+        } else if(index == 1 ) {
+            changeVisiblityFalse(0);
+            changeVisiblityFalse(2);
+            changeVisiblityFalse(3);
+        } else if(index == 2 ) {
+            changeVisiblityFalse(0);
+            changeVisiblityFalse(1);
+            changeVisiblityFalse(3);
+        } else if(index == 3 ) {
+            changeVisiblityFalse(0);
+            changeVisiblityFalse(1);
+            changeVisiblityFalse(2);
+        } 
     }
 
     const changeVisiblityTrue = (index) => {
@@ -101,7 +124,7 @@ const About = () => {
                                     index={index}
                                     onChangeVisibilityTrue={changeVisiblityTrue}
                                     onChangeVisibilityFalse={changeVisiblityFalse}
-                                    onCheckNewIndex={checkNewIndex}
+                                    onCheckNewIndex={deactivateAllButIndex}
                                 ></Skills>
                             </div>
                         );
