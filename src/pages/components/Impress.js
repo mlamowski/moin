@@ -1,5 +1,4 @@
 import React from 'react'
-import Typo_ml from './Typo_ml'
 import { Link } from "react-router-dom";
 
 const Impress = () => {

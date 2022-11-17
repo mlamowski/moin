@@ -1,11 +1,9 @@
 import React from 'react'
-import Wave4 from './Wave4'
 import Wave4Animated from './Wave4Animated';
 
 import { useState, useEffect } from 'react';
 
 
-import Typo_Contact from './Typo_Contact'
 
 const Contact = () => {
   const [isActualKey, setActualKey] = useState(0);
@@ -25,9 +23,9 @@ const Contact = () => {
             <p className=' pb-[30px]'>
                 Neugierig geworden? <br/>
                 Schreib mir doch ein paar Zeilen! <br/>
-                Mail: hello@lamowski.com
+                Mail: milamowski@gmail.com
             </p>
-            <a href="mailto:hello@lamowski.com" className=' bg-[#a85d62] p-[10px] rounded-2xl w-[250px] h-[45px]'>
+            <a href="mailto:milamowski@gmail.com" className=' bg-[#a85d62] p-[10px] rounded-2xl w-[250px] h-[45px]'>
               Emailt mich!
             </a> 
           </div>

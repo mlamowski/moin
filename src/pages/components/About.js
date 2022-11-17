@@ -1,13 +1,10 @@
 import React from 'react'
-import Wave2 from './Wave2'
 import Wave2Animated from './Wave2Animated';
-import Typo_Ueber_Mich from './Typo_Ueber_Mich'
 import michelle from './../../img/Michelle_02.png';
 import build from './../../img/build_FILL0_wght400_GRAD0_opsz48.svg'
 import code from './../../img/code_FILL0_wght400_GRAD0_opsz48.svg'
 import design from './../../img/design_services_FILL0_wght400_GRAD0_opsz48.svg'
 import draw from './../../img/draw_FILL0_wght400_GRAD0_opsz48.svg'
-import Stopwatch from './Stopwatch';
 
 import { useState, useEffect } from 'react';
 
@@ -15,10 +12,10 @@ import { useState, useEffect } from 'react';
 import Skills from './Skills'
 
 const skills = [
-    {"description": "Konzeption", "image": draw, "visible": false, "text": "Von der Ideenfindung bis hin zur Planung übernehme ich alles gerne."},
-    {"description": "Design", "image": design, "visible": false, "text": "Entwicklung und Gestaltung von einzigartigen Designkonzepten"},
-    {"description": "Digitale Medien", "image": code, "visible": false, "text": "Erstellung von Animationen, 3D-Assets bis hin zur Programmierung. Digitale Medien sind mein Ding!"},
-    {"description": "Print Medien", "image": build, "visible": false, "text": "Ich bin eine Expertin für jegliche Formen von Printmedien. Egal ob Flyer, Anzeigen oder Karten. "},
+    {"description": "Konzeption", "image": design, "visible": false, "text": "Ich bin mit vollem Einsatz bei der Ideenfindung bis hin zur Planung dabei."},
+    {"description": "Design", "image": draw, "visible": false, "text": "Entwicklung und Gestaltung von einzigartigen Designkonzepten mit Liebe zum Detail."},
+    {"description": "Digitale Medien", "image": code, "visible": false, "text": "Programmierung, Animationen und 3D-Assets. Digitale Medien sind mein Ding!"},
+    {"description": "Print Medien", "image": build, "visible": false, "text": "Expertin für jegliche Formen von Printmedien. Egal ob Flyer, Poster oder Karten."},
 
 ]
 
@@ -134,7 +131,7 @@ const About = () => {
       
 
                 <p className='py-[30px] font-sans'  >
-                        Mein Name ist Michelle und ich brenne für einzigartige Designs und die neusten Technologien. 
+                    Mein Name ist Michelle und ich brenne für einzigartige Designs und spannende Technologien. 
                         
                 </p>
             </div>
