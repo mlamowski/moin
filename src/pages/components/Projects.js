@@ -9,6 +9,7 @@ import pullTheTrigger from './../../img/03_Pull_the_Trigger.png';
 import cameraProjekt01 from './../../img/04_CGA_01.png';
 import moodium from './../../img/05_Moodium.png';
 
+import { Link } from "react-router-dom";
 
 
 import { useState, useEffect } from 'react';
@@ -18,6 +19,7 @@ import { useState, useEffect } from 'react';
 const Projects = () => {
 
   const [isIndex, setIndex] = useState(0);
+  //as global state
   const [isActualKey, setActualKey] = useState(0);
 
     const testtest = () => {
@@ -58,17 +60,23 @@ const Projects = () => {
 
 
   return (
-    <div className='bg-gradient-to-t from-[#121b2a] to-[#243b4e]  text-center font-sans text-white my-[-1px] '>
+    <div className='bg-gradient-to-t from-[#121b2a] to-[#243b4e]  text-center font-sans text-white my-[-1px] overflow-hidden'>
         <h1 className=' text-4xl pb-[30px] font-extrabold'>PROJEKTE</h1>
         <div className='flex  flex-col justify-between items-center'>
           <div className='flex justify-evenly items-center'>
-            <button onClick={toLeft} type="button" className='h-[50px] w-[50px] p-[10px] sm:w-[40px]'> 
+            <button onClick={toLeft} type="button" className='h-[50px] w-[50px] p-[10px] sm:w-[40px]'                        
+            > 
               <Arrow_Left></Arrow_Left>         
             </button> 
             <div className='flex-col flex  justify-between items-center flex-wrap w-1/2 sm:w-full'>
+            <Link to= {"/" + projectList[isIndex].description} >
               <img className=' w-full aspect-video rounded-3xl object-contain;' 
-              src={projectList[isIndex].image} 
-              alt={projectList[isIndex].description}/>      
+                src={projectList[isIndex].image} 
+                alt={projectList[isIndex].description}
+                />      
+            </Link>
+
+             
             </div>
 
 

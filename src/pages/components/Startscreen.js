@@ -28,8 +28,8 @@ const Startscreen = () => {
       //getRealTime();
   }}
     className= {getRealTime()
-      ? 'bg-gradient-to-tr from-[#33061e] to-[#121b2a]  relative -z-10 my-[-1px] '
-      : 'bg-gradient-to-tr from-[#e4e9eb] to-[#7e9acb]  relative -z-10 my-[-1px]' } >
+      ? 'bg-gradient-to-tr from-[#33061e] to-[#121b2a]  relative -z-10 my-[-1px] overflow-hidden'
+      : 'bg-gradient-to-tr from-[#e4e9eb] to-[#7e9acb]  relative -z-10 my-[-1px] overflow-hidden' } >
         <div className='h-60v sm:h-45v md:h-30v'>
             {getRealTime() 
             ? <Moon></Moon> 
