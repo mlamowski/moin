@@ -27,27 +27,11 @@ const About = () => {
 
     const [isActualKey, setActualKey] = useState(0);
 
-    const testtest = () => {
-      let time = Math.round(Date.now() / 2001);
-      setActualKey(time);
-  
-    }
+    function timeFunction() {
+        let time = Math.round(Date.now() / 2001);
+        setActualKey(time);
 
-    useEffect(() => {
-      });
- 
-      /*
-    const checkNewIndex = (index) => {
-            console.log(isVisible.visible + " " + index)
-        if(index == isLastIndex) {
-            console.log("der Button wurde nochmal geklickt " + index + ", " + isIndex + ", " + isLastIndex);
-        } else {
-            console.log("es wurde ein neuer Button geklickt " + index + ", " + isIndex + ", " + isLastIndex);
-            changeVisiblityFalse(isLastIndex);
-
-        }
     }
-    */
 
     const deactivateAllButIndex = (index) => {
         if(index == 0 ) {
@@ -142,7 +126,7 @@ const About = () => {
         
 
         <Wave2Animated
-            onMouseTest={testtest}
+            onMouseTest={timeFunction}
             key={isActualKey}
                  />
     </div>

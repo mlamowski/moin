@@ -8,10 +8,9 @@ import { useState, useEffect } from 'react';
 const Contact = () => {
   const [isActualKey, setActualKey] = useState(0);
 
-    const testtest = () => {
+    const timeFunction = () => {
       let time = Math.round(Date.now() / 2001);
       setActualKey(time);
-      console.log("ich werde ausgeführt");
   
     }
 
@@ -33,7 +32,7 @@ const Contact = () => {
         </div>
 
         <Wave4Animated
-            onMouseTest={testtest}
+            onMouseTest={timeFunction}
             key={isActualKey}
                  />
     </div>

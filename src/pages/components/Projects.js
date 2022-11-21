@@ -20,11 +20,10 @@ const Projects = ({index}) => {
   const { globalIndex}  = useContext(indexContext);
   const { loadValue } = useContext(indexContext)
 
-  //const [isIndex, setIndex] = useState(0);
-  //as global state
+
   const [isActualKey, setActualKey] = useState(0);
 
-    const testtest = () => {
+    const timeFunction = () => {
       let time = Math.round(Date.now() / 2001);
       setActualKey(time);
   
@@ -39,7 +38,6 @@ const Projects = ({index}) => {
     }
 
     loadValue(index);
-    console.log("global Index ist " + globalIndex);
 
   }
 
@@ -50,7 +48,6 @@ const Projects = ({index}) => {
       index = 0 ;
     }
     loadValue(index);
-    console.log("global Index ist " + globalIndex);
   }
 
   const projectList = [
@@ -100,7 +97,7 @@ const Projects = ({index}) => {
 
 
         <Wave3Animated
-            onMouseTest={testtest}
+            onMouseTest={timeFunction}
             key={isActualKey}
                  />    </div>
   )

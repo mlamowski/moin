@@ -7,7 +7,7 @@ import { ReactComponent as Svg } from './../../img/Assets_wave3.svg';
 export default function Wave3Animated({ onMouseTest}) {
 
 
-  const testFunction = () => {
+  const animateFunction = () => {
     
   // ... javascript goes here 
   // !function ... long code 
@@ -21,12 +21,12 @@ export default function Wave3Animated({ onMouseTest}) {
       // SVG part goes here
       <Svg 
       onMouseOver={() => {
-        testFunction();
+        animateFunction();
         onMouseTest();
 
     }}
     onTouchStart={() => {
-      testFunction();
+      animateFunction();
       onMouseTest();
     }}
 
