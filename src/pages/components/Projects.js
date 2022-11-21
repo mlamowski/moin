@@ -11,14 +11,16 @@ import moodium from './../../img/05_Moodium.png';
 
 import { Link } from "react-router-dom";
 
+import { useState, useEffect, createContext, useContext } from "react";
+import {indexContext} from "./../../App";
 
-import { useState, useEffect } from 'react';
 
+const Projects = ({index}) => {
 
+  const { globalIndex}  = useContext(indexContext);
+  const { loadValue } = useContext(indexContext)
 
-const Projects = () => {
-
-  const [isIndex, setIndex] = useState(0);
+  //const [isIndex, setIndex] = useState(0);
   //as global state
   const [isActualKey, setActualKey] = useState(0);
 
@@ -29,24 +31,26 @@ const Projects = () => {
     }
 
   const toLeft = () => {
-    let index = isIndex;
+    let index = globalIndex;
     index--;
+
     if(index < 0) {
       index = projectList.length -1 ;
     }
 
-    setIndex(index);
-    console.log(isIndex);
+    loadValue(index);
+    console.log("global Index ist " + globalIndex);
+
   }
 
   const toRight = () => {
-    let index = isIndex;
+    let index = globalIndex;
     index++;
     if(index > projectList.length -1) {
       index = 0 ;
     }
-    setIndex(index);
-    console.log(isIndex);
+    loadValue(index);
+    console.log("global Index ist " + globalIndex);
   }
 
   const projectList = [
@@ -69,10 +73,10 @@ const Projects = () => {
               <Arrow_Left></Arrow_Left>         
             </button> 
             <div className='flex-col flex  justify-between items-center flex-wrap w-1/2 sm:w-full'>
-            <Link to= {"/" + projectList[isIndex].description} >
+            <Link to= {"/" + projectList[globalIndex].description} >
               <img className=' w-full aspect-video rounded-3xl object-contain;' 
-                src={projectList[isIndex].image} 
-                alt={projectList[isIndex].description}
+                src={projectList[globalIndex].image} 
+                alt={projectList[globalIndex].description}
                 />      
             </Link>
 
@@ -87,8 +91,8 @@ const Projects = () => {
             </button> 
           </div>
           <div className=' w-1/2 sm:w-[280px] '>
-            <h1 className='relative text-white pt-[20px]'> {projectList[isIndex].description}</h1>
-            <p className='relative text-white pt-[10px]'> {projectList[isIndex].text} </p>
+            <h1 className='relative text-white pt-[20px]'> {projectList[globalIndex].description}</h1>
+            <p className='relative text-white pt-[10px]'> {projectList[globalIndex].text} </p>
           </div>
         </div>
 

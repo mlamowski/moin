@@ -4,12 +4,15 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Impress from "./components/Impress";
 
-function Home() {
+function Home({index}) {
   return (
     <div >
       <Startscreen className=""/> 
       <About className=""/>
-      <Projects className=""></Projects>  
+      <Projects 
+      className=""
+      index={index}
+      ></Projects>  
       <Contact className=""></Contact>
       <Impress className=""></Impress>
     </div>

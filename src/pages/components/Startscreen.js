@@ -15,7 +15,7 @@ const Startscreen = () => {
     const locale = 'en';
     const today = new Date(); // Save the current date to be able to trigger an update
     const hour = today.getHours();
-    if(hour >= 21 || hour <= 6) {
+    if(hour >= 18 || hour <= 6) {
       return true;
     } else {
       return false;
